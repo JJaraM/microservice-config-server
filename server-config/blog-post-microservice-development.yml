@@ -31,8 +31,8 @@ management:
 
 spring:
 
-  #profiles:
-  #  active: "dev"
+  profiles:
+    active: "dev"
 
   boot:
     admin:
