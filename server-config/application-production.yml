@@ -1,2 +1,31 @@
-jjara:
-  test: "hola"
+spring:
+
+  # Redis Configuration
+  redis:
+    configuration:
+      host: ec2-3-91-141-186.compute-1.amazonaws.com
+      port: 20539
+      password: p30265bf32c2a98f5d3e24cd1176a807a9979660244128f150926a817c1ed205e
+
+  data:
+
+    # Mongo Configuration
+    mongodb:
+      uri: mongodb+srv://heroku_rsg0klm3:hhn8u57igl66qfh4dv93sm6fmc@cluster-website-prd.znrtp.mongodb.net/heroku_rsg0klm3?retryWrites=true&w=majority
+      databaseName: heroku_rsg0klm3
+
+  boot:
+
+    # Spring Boot Admin Configuration
+    admin:
+      client:
+        url: https://blog-eureka-server.herokuapp.com
+        username: admin
+        password: springboot-password
+
+        # Instance Configuration
+        instance:
+          management-base-url: https://blog-microservice-post.herokuapp.com
+          service-base-url: ${spring.boot.admin.client.instance.management-base-url}
+          auto-deregistration: true
+          period: 5m
