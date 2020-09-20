@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:5004}
+
+spring:
+  application:
+    name: cloud-server-config
+  # Spring Cloud Config Server Repository
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JJaraM/blog-microservice-config-server.git
+
+        # Search in the 'server-config' directory of the repo. This generally wouldn't
+        # be used because the configs would be in the root directory, but because
+        # this example repo is hosting both the code and the configs, we're
+        # isolating the configuration files into their own directory.
+        searchPaths: server-config
+
+  security:
+    user:
+      name: root
+      password: s3cr3t
