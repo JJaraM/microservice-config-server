@@ -1,3 +1,10 @@
-server:
-  port: ${PORT:5001}
+spring:
+
+  shell:
+    interactive:
+      enabled: true
+
+  cors:
+    allowed-origin: >
+      http://localhost:3000
 

@@ -1,33 +1,14 @@
 server:
   port: ${PORT:5001}
 
-
-
-#info:
-#  app:
-#    name: @project.name@
-#    version: @project.version@
-
 logging:
   file:
     path: "logs"
     name: "logs/client.log"
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-    logfile:
-      external-file: "logs/client.log"
+
 
 spring:
-
-  cors:
-    allowed-origin: 'http://localhost:3000'
 
   boot:
     admin:
@@ -49,8 +30,6 @@ spring:
     channels:
       channel-tag-add: ${REDIS_CHANNEL_TAG_ADD}
       channel-tag-remove: ${REDIS_CHANNEL_TAG_REMOVE}
-
-
 
   data:
     mongodb:
@@ -95,22 +74,3 @@ eureka:
 
 discovery:
   uri: https://jjara-discovery.herokuapp.com/v1/discovery/
-
----
-spring:
-  profiles: "dev"
-
----
-spring:
-
-  shell:
-    interactive:
-      enabled: false
-
-  profiles: "prod"
-  cors:
-    allowed-origin: >
-      https://jonathanjaramorales.herokuapp.com,
-      https://blog-eureka-server.herokuapp.com,
-      http://jonathanjaramorales.herokuapp.com,
-      http://blog-eureka-server.herokuapp.com
