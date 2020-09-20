@@ -1,10 +1,6 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-    logfile:
-      external-file: "logs/client.log"
+spring:
+  redis:
+    configuration:
+      host: ec2-3-91-141-186.compute-1.amazonaws.com
+      port: 20539
+      password: p30265bf32c2a98f5d3e24cd1176a807a9979660244128f150926a817c1ed205e

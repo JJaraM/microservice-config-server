@@ -1,14 +1,11 @@
 server:
   port: ${PORT:5001}
 
-logging:
-  file:
-    path: "logs"
-    name: "logs/client.log"
-
-
-
 spring:
+  redis:
+    channels:
+      channel-tag-add: channel_tag_add
+      channel-tag-remove: channel_tag_remove
 
   boot:
     admin:
@@ -22,19 +19,12 @@ spring:
           service-base-url: ${spring.boot.admin.client.instance.management-base-url}
           auto-deregistration: true
           period: 5m
-  redis:
-    configuration:
-      host: ${REDIS_HOST}
-      port: ${REDIS_PORT}
-      password: ${REDIS_PASSWORD}
-    channels:
-      channel-tag-add: ${REDIS_CHANNEL_TAG_ADD}
-      channel-tag-remove: ${REDIS_CHANNEL_TAG_REMOVE}
 
   data:
     mongodb:
       uri: ${MONGODB_URI}
       databaseName: ${MONGODB_DBNAME}
+
   resources:
     cache:
       period: 31536000
