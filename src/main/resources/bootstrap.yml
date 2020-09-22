@@ -20,10 +20,10 @@ spring:
           # this example repo is hosting both the code and the configs, we're
           # isolating the configuration files into their own directory.
           search-paths: blog-microservice
-          username: ${github.user}
-          password: ${github.password}
+          username: ${git.user}
+          password: ${git.password}
 
   security:
     user:
-      name: root
-      password: s3cr3t
+      name: ${security.user}
+      password: ${security.password}
