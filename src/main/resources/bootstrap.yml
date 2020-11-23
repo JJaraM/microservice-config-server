@@ -12,6 +12,8 @@ spring:
   # Spring Cloud Config Server Repository
   cloud:
     config:
+      overrideSystemProperties: false
+      overrideNone: true
       server:
         git:
           uri: https://github.com/JJaraM/configuration-repository
