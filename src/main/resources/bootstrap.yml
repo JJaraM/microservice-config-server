@@ -21,7 +21,7 @@ spring:
           # isolating the configuration files into their own directory.
           search-paths:
             blog-microservice
-            open-api
+          #  open-api
           username: ${git.user}
           password: ${git.password}
 
