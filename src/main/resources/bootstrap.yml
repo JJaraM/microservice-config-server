@@ -23,6 +23,7 @@ spring:
             - blog-microservice
             - open-api
             - eureka
+            - eureka-server
           username: ${git.user}
           password: ${git.password}
 
