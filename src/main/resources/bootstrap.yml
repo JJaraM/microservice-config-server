@@ -19,11 +19,11 @@ spring:
           # be used because the configs would be in the root directory, but because
           # this example repo is hosting both the code and the configs, we're
           # isolating the configuration files into their own directory.
-          #search-paths:
-          #  - blog-microservice
-          #  - open-api
-          #  - eureka
-          #  - eureka-server
+          search-paths:
+            - blog-microservice
+            - open-api
+            - eureka
+            - eureka-server
           username: ${git.user}
           password: ${git.password}
 
