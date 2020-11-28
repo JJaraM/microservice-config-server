@@ -22,7 +22,7 @@ spring:
           search-paths:
             - blog-microservice
             - open-api
-            - eureka
+            - eureka-client
             - eureka-server
           username: ${git.user}
           password: ${git.password}
