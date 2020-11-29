@@ -20,8 +20,13 @@ spring:
           # this example repo is hosting both the code and the configs, we're
           # isolating the configuration files into their own directory.
           search-paths:
-            - blog-microservice
-            - open-api
+            - blog-post-microservice
             - eureka-client
             - eureka-server
+            - log
+            - management
+            - mongo
+            - open-api
             - redis
+            - shell
+            - swagger
