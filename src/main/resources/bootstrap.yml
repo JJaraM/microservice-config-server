@@ -2,23 +2,13 @@ server:
   port: ${PORT:8888}
 
 spring:
-
-  profiles:
-    active: development
-
   application:
-    name: cloud-server-config
-
-  # Spring Cloud Config Server Repository
+    name: config-server
   cloud:
     config:
       server:
         git:
           uri: https://github.com/JJaraM/configuration-repository
-          # Search in the 'server-config' directory of the repo. This generally wouldn't
-          # be used because the configs would be in the root directory, but because
-          # this example repo is hosting both the code and the configs, we're
-          # isolating the configuration files into their own directory.
           search-paths:
             - blog-microservice-post
             - blog-microservice-tag
