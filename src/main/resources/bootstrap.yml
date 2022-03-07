@@ -8,7 +8,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/JJaraM/configuration-repository
           search-paths:
             - blog-microservice-post
             - blog-microservice-tag
