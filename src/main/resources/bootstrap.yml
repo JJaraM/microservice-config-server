@@ -1,6 +1,9 @@
 server:
   port: 6000
 
+debug: true
+logging.level.root: INFO
+
 spring:
   application:
     name: config-server
