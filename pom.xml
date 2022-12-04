@@ -76,7 +76,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>microservice-cloud-config-server</finalName>
+        <finalName>app</finalName>
 
         <pluginManagement>
             <plugins>
