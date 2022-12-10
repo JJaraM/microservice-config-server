@@ -1,8 +1,8 @@
 server:
-  port: 6000
+  port: 8081
 
-debug: true
-logging.level.root: INFO
+# debug: true
+# logging.level.root: INFO
 
 spring:
   application:
